@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.a`
+export const Button = styled.a`
     color: var(--white);
     border: 1px solid var(--white);
     box-sizing: border-box;
@@ -21,5 +21,3 @@ const Button = styled.a`
     opacity: .5;
     }
 `;
-
-export default Button;
