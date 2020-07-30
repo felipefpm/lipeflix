@@ -1,18 +1,17 @@
 import React from 'react';
-import'./style.css';
-import Button from '../ButtonLink'
 import Logo from '../../Assets/logo01.png'
+import {ButtonLink, MenuWrapper, LogoImg} from '../styled'
 
 function Menu(){
     return (
-        <nav className="Menu">
+        <MenuWrapper className="Menu">
             <a href="/">
-                <img className="Logo" src={Logo} alt="LIPEFLIX logo" />
+                <LogoImg className="Logo" src={Logo} alt="LIPEFLIX logo" />
             </a>
-            <Button className="ButtonLink" href="/">
+            <ButtonLink href="/">
                 Novo Vídeo
-            </Button>
-        </nav>
+            </ButtonLink>
+        </MenuWrapper>
     );
 }
 
