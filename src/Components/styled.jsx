@@ -13,7 +13,6 @@ export const LogoImg = styled.img`
 export const MenuWrapper = styled.nav`
     width: 100%;
     height: 94px;
-    z-index: 100;
 
     display: flex;
     justify-content: space-between;
@@ -21,8 +20,7 @@ export const MenuWrapper = styled.nav`
 
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 0%;
     padding-left: 5%;
     padding-right: 5%;
 
@@ -65,4 +63,28 @@ export const ButtonLink = styled(Button)`
         border: 0;
         text-align: center;
     }
+`;
+
+export const FooterBase = styled.footer`
+  background: var(--black);
+  border-top: 2px solid var(--primary);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: var(--white);
+  text-align: center;
+  @media (max-width: 800px) {
+    margin-bottom: 50px;
+  }
+`;
+
+export const Main = styled.main`
+    background-color: var(--black);
+    color: var(--white);
+    flex: 1;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 94px;
 `;

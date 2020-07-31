@@ -1,14 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 import Logo from '../../Assets/logo01.png'
 import {ButtonLink, MenuWrapper, LogoImg} from '../styled'
 
 function Menu(){
     return (
         <MenuWrapper className="Menu">
-            <a href="/">
+            <Link to="/">
                 <LogoImg className="Logo" src={Logo} alt="LIPEFLIX logo" />
-            </a>
-            <ButtonLink href="/">
+            </Link>
+            <ButtonLink as={Link} to="cadastro/video">
                 Novo Vídeo
             </ButtonLink>
         </MenuWrapper>
