@@ -1,28 +1,64 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
-import Tempalte from '../../Components/TemplateDefault'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function CadastroCategoria(){
-    return(
-        <Tempalte>
-          <h1>Cadastro de Categoria</h1>
+import FormField from "../../Components/FormField";
+import Tempalte from "../../Components/TemplateDefault";
 
-          <form>
-            <label>
-              Nome da Categoria:
-              <input type="text" />
-            </label>
+function CadastroCategoria() {
+  const [categoria, setCategoria] = useState([]);
+  const [nomeCategoria, setNomeCategoria] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [cor, setCor] = useState("");
 
-            <button>
-              Cadastrar
-            </button>
-          </form>
+  function save(e) {
+    e.preventDefault()
 
-          <Link to="/">
-            Ir para home
-          </Link>
-        </Tempalte>
-    )
+    setDescricao(descricao)
+    setCor(cor)
+    setCategoria([
+      ...categoria, 
+      nomeCategoria
+    ])
+  }
+
+  return (
+    <Tempalte>
+      <h1>Cadastro de Categoria:</h1>
+
+      <form onSubmit={save}>
+        <FormField 
+        label="Nome da Categoria: "
+        type="text"
+        value={nomeCategoria}
+        onChange={(e) => setNomeCategoria(e.target.value)}
+        />
+        
+        <FormField 
+        label="Descrição: "
+        type="textarea"
+        value={descricao}
+        onChange={(e) => setDescricao(e.target.value)}
+        />
+        
+        <FormField 
+        label="Cor: "
+        type="color"
+        value={cor}
+        onChange={(e) => setCor(e.target.value)}
+        />
+
+        <button>Cadastrar</button>
+      </form>
+
+      <ul>
+        {categoria.map(categoria => {
+          return <li key={categoria}>{categoria}</li>;
+        })}
+      </ul>
+
+      <Link to="/">Ir para home</Link>
+    </Tempalte>
+  );
 }
 
 export default CadastroCategoria;

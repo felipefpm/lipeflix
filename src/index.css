@@ -1,9 +1,9 @@
-*{
+* {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
 
-:root{
+:root {
   --primary: #c9b30e;
   --black: #000000;
   --frayDark: #141414;
@@ -16,16 +16,17 @@
 }
 
 html,
-body{
-  margin:0;
+body {
+  margin: 0;
   padding: 0;
+  background-color: var(--frayDark);
 }
 
 a {
   color: inherit;
 }
 
-#root{
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

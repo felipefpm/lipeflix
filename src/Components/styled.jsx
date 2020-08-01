@@ -1,69 +1,68 @@
-import styled from 'styled-components';
-import Button from './ButtonLink';
-
+import styled from "styled-components";
+import Button from "./ButtonLink";
 
 export const LogoImg = styled.img`
-    max-width: 168px;
+  max-width: 168px;
 
-    @media (max-width: 800px){
-        max-width: 105px;
-    }
+  @media (max-width: 800px) {
+    max-width: 105px;
+  }
 `;
 
 export const MenuWrapper = styled.nav`
-    width: 100%;
-    height: 94px;
-    z-index: 1;
+  width: 100%;
+  height: 94px;
+  z-index: 200;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    position: fixed;
-    top: 0;
-    left: 0%;
-    padding-left: 5%;
-    padding-right: 5%;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
 
-    background-color: var(--black);
-    border-bottom: 2px solid var(--primary);
-    @media (max-width: 800px){
-        height: 40px;
-        justify-content: center;
-    }
+  background-color: var(--black);
+  border-bottom: 2px solid var(--primary);
+  @media (max-width: 800px) {
+    height: 40px;
+    justify-content: center;
+  }
 `;
 
 export const ButtonLink = styled(Button)`
-    color: var(--white);
-    border: 1px solid var(--white);
-    box-sizing: border-box;
-    cursor: pointer;
-    padding: 16px 24px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    outline: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: opacity .3s;
+  color: var(--white);
+  border: 1px solid var(--white);
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 16px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s;
 
-    &:hover,
-    &:focus {
-    opacity: .5;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 
-    @media (max-width: 800px) {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--primary);
-        outline: 0;
-        border: 0;
-        border: 0;
-        text-align: center;
-    }
+  @media (max-width: 800px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary);
+    outline: 0;
+    border: 0;
+    border: 0;
+    text-align: center;
+  }
 `;
 
 export const FooterBase = styled.footer`
@@ -87,13 +86,15 @@ export const Main = styled.main`
   padding-top: 50px;
   padding-left: 5%;
   padding-right: 5%;
+  margin-top: 94px;
+  background-color: var(--frayDark)
 `;
 
 export const BannerMainContainer = styled.section`
   height: 80vh;
   position: relative;
   color: var(--white);
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
   @media (max-width: 800px) {
@@ -115,7 +116,7 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &:after {
@@ -157,7 +158,7 @@ ContentAreaContainer.Category = styled.h1`
   display: flex;
   align-items: center;
   text-align: center;
-  display: inline-block; 
+  display: inline-block;
   padding: 25px;
   line-height: 1;
   border-radius: 4px;
@@ -189,9 +190,8 @@ ContentAreaContainer.Title = styled.h2`
   }
 `;
 
-
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
@@ -206,7 +206,7 @@ export const WatchButton = styled.button`
   color: var(--black);
   background: var(--white);
   border-color: var(--black);
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   display: none;
   margin: 0 auto;
   @media (max-width: 800px) {
