@@ -1,19 +1,19 @@
 import React from 'react';
-import styled from "styled-components";
+import {HomeWrapper} from "../styled";
 
 import Menu from '../../Components/Menu';
+import BannerMain from '../../Components/BannerMain'
+import Carousel from '../../Components/Carousel'
 import Footer from '../../Components/Footer'
-
-const AppWrapper = styled.div`
-    background: var(--grayDark);
-`;
 
 function Home(){
     return (
-        <AppWrapper>
+        <HomeWrapper>
             <Menu />
+            <BannerMain />
+            <Carousel />
             <Footer />
-        </AppWrapper>
+        </HomeWrapper>
     )
 }
 
