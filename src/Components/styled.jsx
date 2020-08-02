@@ -87,7 +87,10 @@ export const Main = styled.main`
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 94px;
-  background-color: var(--frayDark)
+  background-color: var(--frayDark);
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 `;
 
 export const BannerMainContainer = styled.section`
@@ -212,4 +215,21 @@ export const WatchButton = styled.button`
   @media (max-width: 800px) {
     display: block;
   }
+`;
+
+export const FormFieldCamp = styled.div`
+  margin-top: 10px;
+
+`;
+
+FormFieldCamp.Input = styled.input`
+  margin-top: 15px;
+  margin-bottom:15px;
+  font-size:15px;
+  width: 500px;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  display:flex;
+  align-items:center;
 `;

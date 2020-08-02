@@ -23,25 +23,24 @@ function CadastroCategoria() {
 
   return (
     <Tempalte>
-      <h1>Cadastro de Categoria:</h1>
+      <h1>Cadastro de Categoria</h1>
 
       <form onSubmit={save}>
         <FormField 
-        label="Nome da Categoria: "
+        placeholder="Nome da Categoria"
         type="text"
         value={nomeCategoria}
         onChange={(e) => setNomeCategoria(e.target.value)}
         />
         
         <FormField 
-        label="Descrição: "
+        placeholder="Descrição"
         type="textarea"
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
         />
-        
+
         <FormField 
-        label="Cor: "
         type="color"
         value={cor}
         onChange={(e) => setCor(e.target.value)}

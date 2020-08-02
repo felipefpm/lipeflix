@@ -1,17 +1,18 @@
 import React from 'react';
 
-function FormField({label, type, value, onChange}){
+import {FormFieldCamp} from '../styled';
+
+function FormField({type, value, onChange, placeholder}){
     return(
-        <div>
-            <label>
-            {label} <br/>
-            <input
-             type={type} 
-             value={value} 
-             onChange={onChange}
+        <FormFieldCamp>
+            <FormFieldCamp.Input
+                type={type} 
+                value={value} 
+                onChange={onChange}
+                placeholder={placeholder}  
             />
-            </label>
-        </div>
+         
+        </FormFieldCamp>
     )
 }
 
